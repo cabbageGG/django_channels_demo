@@ -1,0 +1,1 @@
+An easy demo for testing django_channels
