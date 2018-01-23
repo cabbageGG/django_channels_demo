@@ -25,7 +25,7 @@ SECRET_KEY = '=4cq8(hi7=uwez84915ckx^$39c+4k*@&2*mj8!%05%jrukxcl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['47.94.158.171']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,7 +42,10 @@ INSTALLED_APPS = [
 
 CHANNEL_LAYERS = {
     "default": {
-        "BACKEND": "asgiref.inmemory.ChannelLayer",
+		"BACKEND": "asgi_redis.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
         "ROUTING": "channels_example.routing.channel_routing",
     },
 }
