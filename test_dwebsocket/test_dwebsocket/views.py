@@ -10,7 +10,7 @@ from django.http import HttpResponse
 
 
 @accept_websocket
-def echo(request):
+def channels_example(request):
     if not request.is_websocket():#判断是不是websocket连接
         try:#如果是普通的http方法
             message = request.GET['message']
