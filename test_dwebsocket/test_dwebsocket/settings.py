@@ -16,7 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 WEBSOCKET_ACCEPT_ALL=True
-MIDDLEWARE_CLASSES=dwebsocket.middleware.WebSocketMiddleware
+MIDDLEWARE_CLASSES="dwebsocket.middleware.WebSocketMiddleware"
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
