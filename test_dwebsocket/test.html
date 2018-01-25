@@ -9,8 +9,8 @@
             if (window.s) {
                 window.s.close()
             }
-            /*创建socket连接*/
-            var socket = new WebSocket("ws://" + "47.94.158.171:8000" + "/channels_example");
+            /*创建socket连接47.94.158.171*/
+            var socket = new WebSocket("ws://" + "127.0.0.1:8000" + "/channels_example");
             socket.onopen = function () {
                 console.log('WebSocket open');//成功连接上Websocket
             };

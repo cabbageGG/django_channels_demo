@@ -16,7 +16,7 @@ def channels_example(request):
             message = request.GET['message']
             return HttpResponse(message)
         except:
-            return render("hello")
+            return HttpResponse("error")
     else:
         for message in request.websocket:
             request.websocket.send(message)#发送消息到客户端
